@@ -1,27 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --bg-cream: #faf6f1;
+  --bg-beige: #ede4d8;
+  --brown: #8b6f4e;
+  --brown-dark: #5c4a32;
+  --ink: #1a1a1a;
+  --gold: #c4a265;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--bg-cream);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition:
+      opacity 0.7s ease-out,
+      transform 0.7s ease-out;
+  }
+
+  .reveal.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animate-hero-in {
+    animation: hero-fade-up 1s ease-out both;
+  }
+
+  .animate-hero-delay-1 {
+    animation-delay: 0.15s;
+  }
+
+  .animate-hero-delay-2 {
+    animation-delay: 0.3s;
+  }
+
+  .animate-hero-delay-3 {
+    animation-delay: 0.45s;
+  }
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

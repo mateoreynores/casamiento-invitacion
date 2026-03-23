@@ -9,8 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        cream: "var(--bg-cream)",
+        beige: "var(--bg-beige)",
+        brown: "var(--brown)",
+        "brown-dark": "var(--brown-dark)",
+        ink: "var(--ink)",
+        gold: "var(--gold)",
+      },
+      fontFamily: {
+        serif: ['"Libertinus Serif"', "Georgia", "serif"],
+        display: ["var(--font-bellefair)", "Georgia", "serif"],
       },
     },
   },
