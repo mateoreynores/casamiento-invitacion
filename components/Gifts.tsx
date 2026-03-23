@@ -15,7 +15,7 @@ export function Gifts() {
 Lo que más valoramos es que festejemos juntos,
 aunque todo gesto será recibido con mucho cariño.
         </p>
-        <div className="mt-12 grid gap-10 md:grid-cols-2 md:gap-12">
+        <div className="mt-12 flex flex-col-reverse gap-10 md:grid md:grid-cols-2 md:gap-12">
           <div className="flex flex-col items-center rounded-sm border border-brown/25 bg-cream p-8 text-center shadow-sm">
             <h3 className="font-display w-full text-2xl uppercase text-brown-dark">
               Datos bancarios

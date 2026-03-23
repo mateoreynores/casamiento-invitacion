@@ -15,11 +15,23 @@ const images = [
   { src: "/images/carrousel-1.jpeg", alt: "Faustina y Mateo" },
 ];
 
-const IMAGES_PER_SLIDE = 2;
-const totalSlides = Math.ceil(images.length / IMAGES_PER_SLIDE);
 const AUTO_INTERVAL = 5000;
 
+function usePerSlide() {
+  const [perSlide, setPerSlide] = useState(1);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 640px)");
+    const update = () => setPerSlide(mq.matches ? 2 : 1);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+  return perSlide;
+}
+
 export function PhotoSection() {
+  const perSlide = usePerSlide();
+  const totalSlides = Math.ceil(images.length / perSlide);
   const [current, setCurrent] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -28,7 +40,11 @@ export function PhotoSection() {
     timerRef.current = setInterval(() => {
       setCurrent((prev) => (prev + 1) % totalSlides);
     }, AUTO_INTERVAL);
-  }, []);
+  }, [totalSlides]);
+
+  useEffect(() => {
+    setCurrent((c) => Math.min(c, totalSlides - 1));
+  }, [totalSlides]);
 
   useEffect(() => {
     resetTimer();
@@ -83,7 +99,7 @@ export function PhotoSection() {
               {images.map((img) => (
                 <div
                   key={img.src}
-                  className="relative aspect-[3/4] w-1/2 flex-shrink-0"
+                  className="relative aspect-[3/4] w-full shrink-0 sm:w-1/2"
                 >
                   <Image
                     src={img.src}
