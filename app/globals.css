@@ -18,6 +18,15 @@ body {
   background: var(--bg-cream);
 }
 
+.hero-image {
+  object-position: left top;
+}
+@media (min-width: 640px) {
+  .hero-image {
+    object-position: center;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

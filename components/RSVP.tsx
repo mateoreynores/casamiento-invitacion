@@ -9,7 +9,7 @@ export function RSVP() {
           Confirmar asistencia
         </h2>
         <p className="mt-6 font-serif text-lg leading-relaxed text-ink/85">
-          Por favor completá el formulario para confirmarnos si podés acompañarnos.
+          Por favor completá el formulario para confirmarnos si podés acompañarnos antes del 6 de abril.
         </p>
         <a
           href={siteConfig.googleFormUrl}

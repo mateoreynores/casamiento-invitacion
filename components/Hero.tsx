@@ -22,7 +22,7 @@ export function Hero() {
           alt=""
           fill
           priority
-          className="object-cover object-top sm:object-center"
+          className="hero-image object-cover"
         />
       </div>
     </header>
