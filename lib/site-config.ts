@@ -30,7 +30,7 @@ export const siteConfig = {
   },
   afterDinner: {
     title: "Después de cena",
-    time: "21:00 hs",
+    time: "20:30 hs",
     location: "La Angelina — Unquillo, Córdoba",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=La+Angelina%2C+Rep%C3%BAblica+de+Israel+70%2C+Unquillo%2C+C%C3%B3rdoba%2C+Argentina",
