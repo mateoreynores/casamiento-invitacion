@@ -5,9 +5,12 @@ export const siteConfig = {
   googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSe_PeMYbMnRY4erhdGFHYnTXennbzfPJIbSjGeTrapmZdPB_Q/viewform?usp=publish-editor",
   giftRegistryUrl:
     "https://noiraf.mitiendanube.com/lista-de-casamiento/faustina-mateo/",
-  bank: {
-    cvu: "0000069700000000907530",
-    alias: "bando.riego.dolarapp",
+  bankARS: {
+    alias: "mateoreynores",
+    beneficiario: "Mateo Rey Nores",
+  },
+  bankUSD: {
+    cbu: "0070196531004043944404",
     beneficiario: "Mateo Rey Nores",
   },
   ceremony: {

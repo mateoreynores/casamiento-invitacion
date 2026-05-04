@@ -20,22 +20,35 @@ aunque todo gesto será recibido con mucho cariño.
             <h3 className="font-display w-full text-2xl uppercase text-brown-dark">
               Datos bancarios
             </h3>
-            <dl className="mt-6 w-full space-y-4 font-serif text-ink/90">
+            <div className="mt-6 w-full space-y-6 font-serif text-ink/90">
               <div>
-                <dt className="text-sm font-semibold uppercase tracking-wide text-brown">
-                  Beneficiario
-                </dt>
-                <dd className="mt-1 text-lg">{siteConfig.bank.beneficiario}</dd>
+                <p className="text-sm font-semibold uppercase tracking-wide text-brown">Pesos (ARS)</p>
+                <dl className="mt-3 space-y-2">
+                  <div>
+                    <dt className="text-xs uppercase tracking-wide text-brown/70">Beneficiario</dt>
+                    <dd className="mt-0.5 text-lg">{siteConfig.bankARS.beneficiario}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs uppercase tracking-wide text-brown/70">Alias</dt>
+                    <dd className="mt-0.5 text-lg">{siteConfig.bankARS.alias}</dd>
+                  </div>
+                </dl>
               </div>
+              <hr className="border-brown/20" />
               <div>
-                <dt className="text-sm font-semibold uppercase tracking-wide text-brown">CVU</dt>
-                <dd className="mt-1 break-all text-lg">{siteConfig.bank.cvu}</dd>
+                <p className="text-sm font-semibold uppercase tracking-wide text-brown">Dólares (USD)</p>
+                <dl className="mt-3 space-y-2">
+                  <div>
+                    <dt className="text-xs uppercase tracking-wide text-brown/70">Beneficiario</dt>
+                    <dd className="mt-0.5 text-lg">{siteConfig.bankUSD.beneficiario}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-xs uppercase tracking-wide text-brown/70">CBU</dt>
+                    <dd className="mt-0.5 break-all text-lg">{siteConfig.bankUSD.cbu}</dd>
+                  </div>
+                </dl>
               </div>
-              <div>
-                <dt className="text-sm font-semibold uppercase tracking-wide text-brown">Alias</dt>
-                <dd className="mt-1 text-lg">{siteConfig.bank.alias}</dd>
-              </div>
-            </dl>
+            </div>
           </div>
           <div className="flex flex-col items-center rounded-sm border border-brown/25 bg-cream p-8 text-center shadow-sm">
             <h3 className="font-display w-full text-2xl uppercase text-brown-dark">
